@@ -1,1 +1,1 @@
-docker run -it --rm go_env:0.1 /bin/bash 
+docker  run  -v $(pwd):/movie_rec -w /movie_rec -i -t  --rm --name serve movie-rec bash
