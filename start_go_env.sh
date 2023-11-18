@@ -1,1 +1,1 @@
-docker  run  -v $(pwd):/movie_rec -w /movie_rec -i -t  --rm --name serve movie-rec bash
+docker  run  -v $(pwd):/movie_rec -w /movie_rec -i -t  --rm --name serve -p 5001:3333 movie-rec bash
