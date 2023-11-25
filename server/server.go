@@ -19,14 +19,14 @@ func getHello(w http.ResponseWriter, r *http.Request) {
 }
 func getGoogle(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("got /google request\n")
-	res, err := http.Get("https://google.com")
+	res, err := http.Get("https://localhost:3333")
 	if err != nil {
 		fmt.Printf("error making http request: %s\n", err)
 		os.Exit(1)
 	}
 
 	body, err := ioutil.ReadAll(res.Body)
-	fmt.Printf(string(body))
+	fmt.Printf("empty", string(body))
 	if err != nil {
 		fmt.Printf("error reading response body: %s\n", err)
 		os.Exit(1)
